@@ -3,6 +3,7 @@ from flask import request
 import pymongo
 import json
 import urllib.parse
+import dnspython
 app = Flask(__name__)
 @app.route("/",methods = ['GET', 'POST'])
 #{"query_type": "discounted_products_list","filters": [{"operand1": "discount","operator": ">","operand2": 5}]}
