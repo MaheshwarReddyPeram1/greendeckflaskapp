@@ -4,9 +4,9 @@ import pymongo
 import json
 import urllib.parse
 app = Flask(__name__)
-@app.route("/<name>,",methods = ['GET', 'POST'])
+@app.route("/,",methods = ['GET', 'POST'])
 #{"query_type": "discounted_products_list","filters": [{"operand1": "discount","operator": ">","operand2": 5}]}
-def hello(name):
+def hello():
   
   myclient = pymongo.MongoClient("mongodb+srv://maheswarreddyperam:M%40hi1432@cluster0-r0ygt.mongodb.net/test?retryWrites=true&w=majority")
   
@@ -86,7 +86,7 @@ def hello(name):
       return{
         query_type : str(competition_discount_diff_list)
       }
-  return name
+  return "Index page"
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000)
