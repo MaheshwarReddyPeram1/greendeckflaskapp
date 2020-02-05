@@ -87,6 +87,6 @@ def hello():
         query_type : str(competition_discount_diff_list)
       }
   return "Index page"
-# if __name__ == '__main__':
-#     # Threaded option to enable multiple instances for multiple user access support
-#     app.run(threaded=True, port=5000)
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
