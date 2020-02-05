@@ -3,7 +3,7 @@ from flask import request
 import pymongo
 import json
 import urllib.parse
-import dnspython
+
 app = Flask(__name__)
 @app.route("/",methods = ['GET', 'POST'])
 #{"query_type": "discounted_products_list","filters": [{"operand1": "discount","operator": ">","operand2": 5}]}
@@ -87,7 +87,6 @@ def hello():
       return{
         query_type : str(competition_discount_diff_list)
       }
-  return "Index page"
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000)
